@@ -16,11 +16,15 @@ export default function Signup() {
     if (form.password.length < 8) return setError('Password must be at least 8 characters');
     setError(''); setLoading(true);
     try {
+      console.log("Submitting form:", form);
       const { data } = await api.post('/auth/signup', form);
+      console.log("Response from backend:", data);
       localStorage.setItem('token', data.token);
       navigate('/dashboard');
+      /*const { data } = await api.post('/auth/signup', form);
+      localStorage.setItem('token', data.token);
+      navigate('/dashboard');*/
     } catch (err) {
-      console.log("yahan fail hua h")
       setError(err.response?.data?.error || 'Signup failed');
     } finally { setLoading(false); }
   };
