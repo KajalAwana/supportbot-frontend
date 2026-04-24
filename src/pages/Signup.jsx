@@ -20,6 +20,7 @@ export default function Signup() {
       localStorage.setItem('token', data.token);
       navigate('/dashboard');
     } catch (err) {
+      console.log("yahan fail hua h")
       setError(err.response?.data?.error || 'Signup failed');
     } finally { setLoading(false); }
   };
