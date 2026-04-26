@@ -17,7 +17,7 @@ export default function Signup() {
     setError(''); setLoading(true);
     try {
       console.log("Submitting form:", form);
-      const { data } = await api.post('/auth/signup', form);
+      const { data } = await api.post('/api/auth/signup', form);
       console.log("Response from backend:", data);
       localStorage.setItem('token', data.token);
       navigate('/dashboard');
