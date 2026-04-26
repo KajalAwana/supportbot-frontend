@@ -5,6 +5,8 @@ import supabase from '../lib/supabase.js';
 const router = express.Router();
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
+console.log("chaaaaaa", openai);
+
 const FREE_LIMIT = 100;
 const PRO_LIMIT = 5000;
 
