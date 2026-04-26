@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 
-console.log("supabaseURL:", process.env.SUPABASE_URL)
+console.log("here supabaseURL:", process.env.SUPABASE_URL)
 console.log("KEY:", process.env.SUPABASE_ANON_KEY)
 
 
